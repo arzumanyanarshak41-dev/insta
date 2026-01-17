@@ -1,0 +1,450 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  margin: 10px auto;
+  width: 600px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.login {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  .loginBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  img {
+    width: 200px;
+    user-select: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    input {
+      padding: 8px;
+      border-radius: 5px;
+      background-color: #f4f5f7;
+      border: 1px solid gray;
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 12px;
+      background-color: #808efc;
+      border: 1px solid gray;
+      color: white;
+      width: 100%;
+    }
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.signup {
+  width: 400px;
+  margin: 10px auto;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .firstP {
+    color: gray;
+    font-size: 20px;
+  }
+
+  img {
+    width: 150px;
+    user-select: none;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+
+    .imgbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .choseimg {
+        background-color: white;
+        border: none;
+        display: none;
+      }
+    }
+
+    label {
+      background-color: #808efc;
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid gray;
+      border-radius: 10px;
+      color: white;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: white;
+      border: 1px solid grey;
+    }
+
+    a {
+      width: 100%;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f4f5f7;
+      border: 1px solid gray;
+    }
+
+    button {
+      padding: 10px;
+      border-radius: 12px;
+      background-color: #808efc;
+      border: 1px solid gray;
+      color: white;
+      width: 100%;
+    }
+  }
+
+  .haveacc {
+    text-align: center;
+    border: 1px solid gray;
+    width: 100%;
+    margin: 15px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .infobox {
+    display: flex;
+    gap: 20px;
+    margin: 10px auto;
+    padding: 30px;
+
+    .imgbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      p {
+        color: rgb(93, 93, 93);
+      }
+
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid gray;
+      }
+    }
+
+    .nameinfo {
+      display: flex;
+      flex-direction: column;
+      width: 400px;
+
+      h3 {
+        font-weight: bolder;
+      }
+
+      .follow {
+        margin-block: 30px;
+        display: flex;
+        gap: 20px;
+      }
+    }
+  }
+
+  .buts {
+    display: flex;
+    margin: 10px auto;
+    gap: 15px;
+
+    button {
+      border: none;
+      width: 230px;
+      border-radius: 8px;
+      padding: 10px;
+    }
+  }
+}
+
+.addaktual {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 500px;
+  margin: 40px auto;
+
+  img {
+    width: 40px;
+    height: 40px;
+    border: 1px double gray;
+    border-radius: 50%;
+    padding: 10px;
+  }
+}
+
+.menubar {
+  display: flex;
+  width: 500px;
+  margin: 10px auto;
+  justify-content: space-around;
+  border-bottom: 1px solid gray;
+  padding: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.postsbox {
+  width: 400px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  margin: 10px auto;
+  background-color: white;
+  display: flex;
+  width: 600px;
+  position: sticky;
+  bottom: 0px;
+  align-items: center;
+  justify-content: space-around;
+  border-block: 1px solid gray;
+  padding: 10px;
+
+  img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+}
+
+.general {
+  .storys {
+    display: flex;
+    width: 600px;
+    overflow-y: scroll;
+    gap: 15px;
+
+    .story {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 50px;
+        height: 50px;
+        border: 1px double rgb(255, 162, 0);
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.publications {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-block: 70px;
+
+  .userlogo {
+    width: 30px;
+  }
+
+  .publicBox {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 8px;
+    gap: 30px;
+    .pic{
+      border-radius: 8px;
+    }
+    .profinfo {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        padding: 5px;
+      }
+    }
+    
+    .reaction {
+      display: flex;
+      gap: 30px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+.search {
+  width: 600px;
+  margin: 10px auto;
+  padding: 30px;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: rgba(128, 128, 128, 0.164);
+  }
+
+  .findbox {
+    height: 600px;
+
+    .resbox {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 15px 30px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid gray;
+        border-radius: 50%;
+      }
+
+      .usname {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.direct {
+  display: flex;
+  gap: 20px;
+
+  aside {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 1px solid gray;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .massageBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 90vh;
+    gap: 15px;
+    border-inline: 1px solid gray;
+
+    .usinfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .userimg {
+      width: 80px;
+      height: 80px;
+      border: 1px solid gray;
+      border-radius: 50%;
+    }
+  }
+
+  .massage {
+    display: flex;
+    gap: 5px;
+    padding: 10px;
+
+    input {
+      width: 90%;
+      padding: 5px;
+      border-radius: 20px;
+      border: 1px solid gray;
+      background-color: #f4f5f7;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: #808efc;
+    }
+  }
+}
