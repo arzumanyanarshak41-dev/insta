@@ -439,7 +439,7 @@ align-items: center;
 
     input {
       width: 90%;
-      padding: 5px;
+      padding: 10px;
       border-radius: 20px;
       border: 1px solid gray;
       background-color: #f4f5f7;
@@ -450,5 +450,20 @@ align-items: center;
       border: none;
       color: #808efc;
     }
+  }
+}
+.messBox{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  h4{
+    border: none;
+    background-color: #808efc;
+    border-radius: 10px 10px 10px 0px ;
+    width: fit-content;
+    color: white;
+    padding: 10px;
+    text-align: end;
   }
 }

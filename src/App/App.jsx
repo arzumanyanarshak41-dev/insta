@@ -15,7 +15,7 @@ export function App() {
     username: "arshak03",
     password: "pass1234",
     email: "arshak@gmail.com",
-    userimg: "https://avatars.mds.yandex.net/get-verba/997355/2a00000187e6a56fc2d2c95326c2b0135d3c/456x342",
+    userimg: "https://d23etkghwwc7sj.cloudfront.net/uploads/tour/images/685121414b2a6-khustup.webp",
     posts: 5,
     followers: 321,
     following: 178
