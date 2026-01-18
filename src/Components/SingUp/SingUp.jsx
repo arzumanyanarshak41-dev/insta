@@ -17,18 +17,21 @@ export const SignUp = ({ data, setData }) => {
             password: password,
             fullname: fullname,
             username: username,
-            userimg:file,
-            posts:0,
-            followers:Math.round(Math.random()*300)+150,
-            following:Math.round(Math.random()*300)+50
+            userimg: file,
+            posts: 0,
+            followers: Math.round(Math.random() * 300) + 150,
+            following: Math.round(Math.random() * 300) + 50,
+            messages: [],
+            bio:"",
+            isFollowing:false
         }])
         navigate("/")
         e.target.reset()
     }
-    function imgefunc(e){
+    function imgefunc(e) {
         const selectedFile = e.target.files[0]
         const render = new FileReader()
-        render.onload=()=>{
+        render.onload = () => {
             setFile(render.result)
         }
         render.readAsDataURL(selectedFile)
@@ -41,7 +44,7 @@ export const SignUp = ({ data, setData }) => {
                 <div className="imgbox">
                     <img src={file} alt="" />
                     <label htmlFor="forimg">choose image</label>
-                    <input type="file" id="forimg" className="choseimg" onChange={imgefunc}/>
+                    <input type="file" id="forimg" className="choseimg" onChange={imgefunc} />
                 </div>
                 <input type="email" placeholder="Email" required />
                 <input type="password" placeholder="Password" required />

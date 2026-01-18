@@ -1,26 +1,36 @@
 import { useEffect, useState } from "react"
 import { Footer } from "../Footer/Footer"
-
-export const Direct = ({ data, logedUser }) => {
-    const [pers, setpers] = useState(data[0])
-    const [massage, setmassage] = useState([])
-    useEffect(()=>{
-        setmassage([])
-    },[pers])
+import { Link } from "react-router-dom"
+export const Direct = ({ data, logedUser, setData, who, setChoosedUser }) => {
+    const [pers, setpers] = useState(who)
+    useEffect(() => {
+        setData(
+            data.map((el) => {
+                if (el.username == pers.username) {
+                    return { ...el, messages: pers.messages }
+                } else {
+                    return el
+                }
+            })
+        )
+    }, [pers])
     function getdirect(e) {
         const user = data.filter((el) => el.userimg == e.target.src)[0]
+        setChoosedUser(user)
         setpers(user)
     }
     function sending(e) {
         e.preventDefault()
         const mess = e.target[0].value
-        setmassage([...massage, mess])
+        setpers({ ...pers, messages: [...pers.messages, mess] })
+        const person = data.find((el) => el.username == pers.username)
         e.target.reset()
     }
     return (
         <div className="direct">
             <aside>
                 {data.map((el) => {
+                    if (el.username == logedUser.username && el.username != "Saved Messages") return
                     return (
                         <img src={el.userimg} alt="" onClick={getdirect} />
                     )
@@ -31,10 +41,11 @@ export const Direct = ({ data, logedUser }) => {
                     <img src={pers.userimg} className="userimg" />
                     <h3>{pers.fullname}</h3>
                     <p>{pers.username}</p>
+                    <Link to="/profile"><button>View Profile</button></Link>
                 </div>
                 <div className="bottom">
                     <div className="messBox">
-                        {massage.map((el) => {
+                        {pers.messages.map((el) => {
                             return (
                                 <h4>{el}</h4>
                             )

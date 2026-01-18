@@ -1,5 +1,5 @@
 import { Footer } from "../Footer/Footer"
-
+import { Link } from "react-router-dom"
 export const Home = ({ logedUser }) => {
     return (
         <div className="home">
@@ -12,15 +12,16 @@ export const Home = ({ logedUser }) => {
                     <h3>{logedUser.username}</h3>
                     <p>{logedUser.fullname}</p>
                     <div className="follow">
-                        <p>{logedUser.posts} posts</p>
-                        <p>{logedUser.followers} followers</p>
-                        <p>{logedUser.following} following</p>
+                        <p><span>{logedUser.posts}</span> posts</p>
+                        <p><span>{logedUser.followers}</span> followers</p>
+                        <p><span>{logedUser.following}</span> following</p>
                     </div>
                 </div>
             </div>
+            <p className="biotext">{logedUser.bio}</p>
             <div className="buts">
-                <button>Edit Profile</button>
-                <button>View Archive</button>
+                <Link to="/editprofile"><button>Edit Profile</button></Link>
+                <Link to="/archive"><button>View Archive</button></Link>
             </div>
             <div className="addaktual">
                 <img src="https://www.iconpacks.net/icons/2/free-plus-icon-3107-thumb.png" alt="" />
@@ -34,7 +35,7 @@ export const Home = ({ logedUser }) => {
             <div className="postsbox">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShghD3OySvPSVjhRdByE19OoM4F5ZsA8gw7A&s" alt="" />
             </div>
-            <Footer logedUser={logedUser}/>
+            <Footer logedUser={logedUser} />
         </div>
     )
 }
